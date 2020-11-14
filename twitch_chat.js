@@ -18,12 +18,8 @@ var http = require('http');
 http.createServer(function (req, res) { 
 	res.writeHead(200, { 'Content-Type': 'text/html' }); 
 	res.end('Hello World\n');
-    // req.url stores the path in the url 
-    var url = req.url; 
 
 }).listen(process.env.PORT)
-
-
 
 /////////////////////////////////////////////////////////////////////
 

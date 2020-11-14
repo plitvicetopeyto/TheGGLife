@@ -1,0 +1,24 @@
+{
+  "name": "thegglife",
+  "version": "1.0.0",
+  "description": "",
+  "main": "twitch_chat.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "twitch-js": "^2.0.0-beta.33"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plitvicetopeyto/TheGGLife.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plitvicetopeyto/TheGGLife/issues"
+  },
+  "homepage": "https://github.com/plitvicetopeyto/TheGGLife#readme"
+}

@@ -11,6 +11,29 @@ try {
 const TwitchJS = require('twitch-js').default;
 
 
+/////////////////////////////////////////////////////////
+
+var http = require('http'); 
+  
+http.createServer(function (req, res) { 
+	res.writeHead(200, { 'Content-Type': 'text/html' }); 
+	res.end('Hello World\n');
+    // req.url stores the path in the url 
+    var url = req.url; 
+
+}).listen(process.env.PORT)
+
+
+
+/////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
 
 const token = process.env.OATH_TOKEN;
 const username = process.env.BOT_USERNAME;
@@ -20,6 +43,15 @@ const channel = process.env.CHANNEL_NAME;
 console.log('Channel: ' + channel);
 
 const { api, chat } = new TwitchJS({ token, username });
+
+
+
+
+
+
+function checkJS() {
+	alert('This is JS');
+}
 
 
 
@@ -46,6 +78,8 @@ function findWinners(arr) {
 const handleMessage = message => {
 
 
+	// state management
+
 	if( message.message === '!A') {
 		console.log('Vote for A')
 		++votes[0];
@@ -70,7 +104,6 @@ const handleMessage = message => {
 		console.log('Winner(s): ' + str_winners);
 		
 		
-		
 		console.log('Votes for A: ' + votes[0]);	
 		console.log('Votes for B: ' + votes[1]);
 		console.log('Votes for C: ' + votes[2]);
@@ -82,6 +115,12 @@ const handleMessage = message => {
 
 chat.on(TwitchJS.Chat.Events.ALL, handleMessage);
 
+//chat.on(TwitchJS.Chat.Events.ALL, 
+
 chat.connect().then(() => {
 	chat.join(channel);
 });
+
+
+
+
